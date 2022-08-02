@@ -1,4 +1,6 @@
 
+//Api'den gelen verileri sınıflandırmak için Angular'da interface kullanılır.
+//export == public(.net)
 export interface Car{
     carId:number;
     carName:string;

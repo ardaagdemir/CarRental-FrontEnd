@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Car } from 'src/app/models/car';
 import { CarService } from 'src/app/services/car.service';
 
-//HttpClient' ı bir companentte kullanabilmek için onun enjekte edilmesi gerekir.
+
 @Component({
   selector: 'app-car',
   templateUrl: './car.component.html',
@@ -21,7 +21,7 @@ export class CarComponent implements OnInit {
   getCars() {
     this.carService.getCars().subscribe(response=>{
       this.cars = response.data
-      this.dataLoaded = true; //Kodu senkron hale getirmek için kullanılır.
+      this.dataLoaded = true; 
     })
     
   }

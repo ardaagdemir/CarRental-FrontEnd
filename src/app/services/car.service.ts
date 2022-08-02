@@ -4,17 +4,17 @@ import { Observable } from 'rxjs';
 import { CarResponseModel } from '../models/carResponseModel';
 
 
-@Injectable({ //Enjekte edilecek servis
+@Injectable({
   providedIn: 'root'
 })
 export class CarService {
 
   apiUrl = 'https://localhost:44323/api/cars/getall';
 
-  constructor(private httpClient: HttpClient) { } //HttpClient enjekte edildi.
+  constructor(private httpClient: HttpClient) { } 
 
   getCars():Observable<CarResponseModel> {
-    return this.httpClient.get<CarResponseModel>(this.apiUrl); //constructor' da tanımlanan değişkene diğer fonksiyonlardan erişilebilir.
+    return this.httpClient.get<CarResponseModel>(this.apiUrl);
       
   }
 }
